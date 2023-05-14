@@ -124,7 +124,7 @@ public class MoleModForge {
                 continue;
             }
 
-            if (event.level.canSeeSky(player.blockPosition()) && event.level.isDay() && player.getLevel().dimension() == Level.OVERWORLD && !safeRegistry.containsKey(player.getUUID()) && !player.isCreative()) {
+            if (event.level.canSeeSky(player.blockPosition()) && event.level.isDay() && player.getLevel().dimension() == Level.OVERWORLD && !safeRegistry.containsKey(player.getUUID()) && !(player.isCreative() || player.isSpectator())) {
                 if (!offenses.containsKey(player.getUUID())) {
                     offenses.put(player.getUUID(), new OffenseTracker());
                 }
