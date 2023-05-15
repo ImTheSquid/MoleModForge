@@ -25,7 +25,7 @@ public class OffenseTracker {
             if (second == 1) {
                 suffix = "th";
             }
-            player.sendSystemMessage(Component.literal(ChatFormatting.RED + "IT BURNS! This is the " + offenses + suffix + " time you've ventured out!"));
+            player.displayClientMessage(Component.literal(ChatFormatting.RED + "IT BURNS! This is the " + offenses + suffix + " time you've ventured out!"), true);
         }
         isOffending = true;
     }
